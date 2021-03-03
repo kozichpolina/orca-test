@@ -1,10 +1,13 @@
+import {GlobalStyle} from "./global-styles/index";
+
 import {Button} from "./partials/Button";
 
 function App() {
   return (
-    <div className="App">
-      <Button>Hello world</Button>
-    </div>
+      <div>
+        <GlobalStyle/>
+          <Button>Hello world</Button>
+      </div>
   );
 }
 

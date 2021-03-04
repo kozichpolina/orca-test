@@ -30,5 +30,16 @@ export const GlobalStyle = createGlobalStyle`
     @media (min-width: ${vars.breakpoints.tablet}) {
       font-size: ${vars.fontSize.base};
     }
+    
+    button {
+      padding: 0;
+      font-family: inherit;
+      font-size: 100%;
+      border: none;
+      
+      &:focus {
+        outline: none;
+      }
+    }
   }
 `

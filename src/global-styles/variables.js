@@ -12,7 +12,11 @@ export const fontFamily = {
 
 export const fontSize = {
     base: "16px",
-    baseMobile: "14px"
+    baseMobile: "14px",
+    bodyS: ".75rem",
+    bodyM: ".875rem",
+    h2: "1.125rem",
+    h3: "0.875rem"
 }
 
 export const breakpoints = {
@@ -23,4 +27,13 @@ export const units = {
     ss: ".25rem",
     sm: ".5rem",
     sl: "1rem"
+}
+
+export const transition = {
+    duration: ".25s"
+}
+
+export const borderRadius = {
+    ss: "2px",
+    sm: "4px"
 }

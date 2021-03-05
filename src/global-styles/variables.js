@@ -2,8 +2,8 @@ export const colors = {
     grey: "#70707b",
     brand: "#0080ff",
     brandBlack: "#10111d",
-    black: "#000",
-    white: "#fff"
+    black: "#000000",
+    white: "#ffffff"
 }
 
 export const fontFamily = {
@@ -13,8 +13,9 @@ export const fontFamily = {
 export const fontSize = {
     base: "16px",
     baseMobile: "14px",
-    bodyS: ".75rem",
-    bodyM: ".875rem",
+    bodyS: ".625rem",
+    bodyM: ".75rem",
+    bodyL: ".875rem",
     h2: "1.125rem",
     h3: "0.875rem"
 }
@@ -24,7 +25,8 @@ export const breakpoints = {
 }
 
 export const units = {
-    ss: ".25rem",
+    sxs: ".25rem",
+    ss: ".375rem",
     sm: ".5rem",
     sl: "1rem"
 }

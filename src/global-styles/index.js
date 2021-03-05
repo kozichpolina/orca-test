@@ -14,7 +14,21 @@ export const GlobalStyle = createGlobalStyle`
   *,
   *::before,
   *::after {
-    box-sizing: border-box; // 1
+    box-sizing: border-box; 
+  }
+  
+  html {
+    -webkit-text-size-adjust: 100%; 
+    -ms-text-size-adjust: 100%; 
+    -ms-overflow-style: scrollbar; 
+    -webkit-font-smoothing: antialiased; 
+    -moz-osx-font-smoothing: grayscale;
+
+    font-size: ${vars.fontSize.baseMobile};
+
+    @media (min-width: ${vars.breakpoints.tablet}) {
+      font-size: ${vars.fontSize.base};
+    }
   }
 
   body {
@@ -30,16 +44,31 @@ export const GlobalStyle = createGlobalStyle`
     @media (min-width: ${vars.breakpoints.tablet}) {
       font-size: ${vars.fontSize.base};
     }
+  }
+  
+  ul,
+  ol,
+  li,
+  dl,
+  dt,
+  dd {
+    padding: 0;
+    margin: 0;
+  }
+
+  li {
+    list-style: none;
+  }
+
+  button {
+    padding: 0;
+    font-family: inherit;
+    font-size: 100%;
+    line-height: 1.2;
+    border: none;
     
-    button {
-      padding: 0;
-      font-family: inherit;
-      font-size: 100%;
-      border: none;
-      
-      &:focus {
-        outline: none;
-      }
+    &:focus {
+      outline: none;
     }
   }
 `

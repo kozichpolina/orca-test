@@ -13,7 +13,7 @@ const getChildren = (props) => {
         return (
             <React.Fragment>
                 <Icon type={icon}/>
-                {children}
+                {children && <span>{children}</span>}
             </React.Fragment>
         )
     }
@@ -24,11 +24,10 @@ const getChildren = (props) => {
     )
 }
 
-//TODO: Add aria-label if only icon
-
 export const ButtonComponent = ({
     href,
     className,
+    ariaLabel,
     ...props
 }) => {
     let output = null;
@@ -41,7 +40,7 @@ export const ButtonComponent = ({
         );
     } else {
         output = (
-            <button type="button" className={className}>
+            <button type="button" className={className} aria-label={ariaLabel}>
                 {getChildren(props)}
             </button>
         );

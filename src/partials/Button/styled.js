@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 import * as vars from '../../global-styles/variables.js';
 import { ButtonComponent } from './component';
@@ -9,14 +9,20 @@ const ButtonBase = styled(ButtonComponent)`
   align-items: center;
   font-size: ${vars.fontSize.bodyS};
   transition-duration: ${vars.transition.duration};
+  user-select: none;
 
-  ${Icon} {
-    margin-right: ${vars.units.ss}
+  button& {
+    cursor: pointer;
+  }
+
+  ${Icon} svg {
+    width: 1.2em;
+    height: 1.2em;
   }
 `;
 
 const Button = styled(ButtonBase)`
-  padding:  ${vars.units.sm} ${vars.units.sl};
+  padding: ${vars.units.sm} ${vars.units.sl};
   background-color: ${props => props.primary ? vars.colors.brand : vars.colors.white};
   color: ${props => props.primary ? vars.colors.white : vars.colors.black};
   text-transform: uppercase;
@@ -31,6 +37,14 @@ const Button = styled(ButtonBase)`
     
     ${Icon} {
       fill: ${props => props.primary ? vars.colors.white : vars.colors.brand};
+    }
+  }
+
+  ${Icon} { //:not:only-child is bad for performance
+    margin-right: ${vars.units.ss};
+    
+    &:only-child { 
+      margin-right: 0;
     }
   }
 `;
@@ -48,6 +62,25 @@ const ButtonText = styled(ButtonBase)`
       fill: ${vars.colors.brand};
     }
   }
+
+  ${Icon} { //:not:only-child is bad for performance
+    margin-right: ${vars.units.ss};
+
+    &:only-child {
+      margin-right: 0;
+    }
+  }
 `;
 
-export { Button, ButtonText };
+const ButtonIcon = styled(ButtonBase)`
+  background-color: transparent;
+  
+  &:hover,
+  &:focus {
+    ${Icon} {
+      fill: ${vars.colors.brand};
+    }
+  }
+`;
+
+export {Button, ButtonText, ButtonIcon};

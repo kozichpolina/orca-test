@@ -25,16 +25,6 @@ const iconSrc = {
     TRASH: Trash
 }
 
-const iconProps = (svg, props) => {
-    const {
-        width,
-        height
-    } = props;
-
-    svg.setAttribute("width", width);
-    svg.setAttribute("height", height);
-    //TODO: title?
-}
 export const IconComponent = ({
    className,
    type,
@@ -45,7 +35,6 @@ export const IconComponent = ({
             src={iconSrc[type]}
             className={className}
             wrapper="span"
-            beforeInjection={(svg) => iconProps(svg, props)}
         />
     )
 };

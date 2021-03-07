@@ -19,12 +19,12 @@ List.propTypes = {
     direction: propTypes.string,
     ...['column', 'row', 'column-reverse', 'row-reverse'].propTypes,
     gap: propTypes.string,
-    ...vars.units.propTypes,
+    ...vars.space.propTypes,
 }
 
 List.defaultProps = {
     direction: 'column',
-    gap: vars.units.ss,
+    gap: vars.space.ss,
 }
 
 export { List };

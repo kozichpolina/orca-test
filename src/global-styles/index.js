@@ -37,15 +37,17 @@ export const GlobalStyle = createGlobalStyle`
     font-weight: normal;
     line-height: 1.2;
     color: ${vars.colors.brandBlack};
-    font-size: ${vars.fontSize.baseMobile};
+    font-size: ${vars.fontSize.bodyM};
     text-align: left;
     background-color: ${vars.colors.white};
-
-    @media (min-width: ${vars.breakpoints.tablet}) {
-      font-size: ${vars.fontSize.base};
-    }
   }
   
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
   ul,
   ol,
   li,

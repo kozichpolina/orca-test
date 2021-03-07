@@ -6,7 +6,7 @@ import { ButtonIcon } from '../Button';
 
 const MenuContext = styled(MenuContextComponent)`
   position: relative;
-  padding: ${vars.units.sl} ${vars.units.sm} ${vars.units.sm};
+  padding: ${vars.space.sl} ${vars.space.sm} ${vars.space.sm};
   box-shadow: 0 0 10px 0 ${vars.colors.black}10;
 
   ${ButtonIcon} {

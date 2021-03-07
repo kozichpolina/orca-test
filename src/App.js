@@ -38,7 +38,7 @@ function App() {
           <ButtonText icon={iconTypes.pencil}>Edit</ButtonText>
           <ButtonText icon={iconTypes.trash}>Delete</ButtonText>
         </List>
-        <List direction='row-reverse' gap={vars.units.sl}>
+        <List direction='row-reverse' gap={vars.space.sl}>
           <ButtonText icon={iconTypes.files}>Duplicate</ButtonText>
           <ButtonText icon={iconTypes.pencil}>Edit</ButtonText>
           <ButtonText icon={iconTypes.trash}>Delete</ButtonText>

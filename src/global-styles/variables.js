@@ -17,18 +17,23 @@ export const fontSize = {
     bodyM: ".75rem",
     bodyL: ".875rem",
     h2: "1.125rem",
-    h3: "0.875rem"
+    h3: ".875rem"
 }
 
 export const breakpoints = {
     tablet: "600px"
 }
 
-export const units = {
+export const space = {
     sxs: ".25rem",
     ss: ".375rem",
     sm: ".5rem",
     sl: "1rem"
+}
+
+export const iconSize = {
+    sm: ".75rem",
+    sl: "1.125rem"
 }
 
 export const transition = {
@@ -36,6 +41,6 @@ export const transition = {
 }
 
 export const borderRadius = {
-    ss: "2px",
-    sm: "4px"
+    ss: ".125rem",
+    sm: ".25rem"
 }

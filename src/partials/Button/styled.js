@@ -22,7 +22,7 @@ const ButtonBase = styled(ButtonComponent)`
 `;
 
 const Button = styled(ButtonBase)`
-  padding: ${vars.units.sm} ${vars.units.sl};
+  padding: ${vars.space.sm} ${vars.space.sl};
   background-color: ${props => props.primary ? vars.colors.brand : vars.colors.white};
   color: ${props => props.primary ? vars.colors.white : vars.colors.black};
   text-transform: uppercase;
@@ -41,7 +41,7 @@ const Button = styled(ButtonBase)`
   }
 
   ${Icon} { //:not:only-child is bad for performance
-    margin-right: ${vars.units.ss};
+    margin-right: ${vars.space.ss};
     
     &:only-child { 
       margin-right: 0;
@@ -64,7 +64,7 @@ const ButtonText = styled(ButtonBase)`
   }
 
   ${Icon} { //:not:only-child is bad for performance
-    margin-right: ${vars.units.ss};
+    margin-right: ${vars.space.ss};
 
     &:only-child {
       margin-right: 0;

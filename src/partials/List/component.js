@@ -1,7 +1,6 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import {ListItem} from './ListItem';
-
+import propTypes from 'prop-types';
+import { ListItem } from './ListItem';
 
 export const ListComponent = ({
     className,
@@ -19,7 +18,7 @@ export const ListComponent = ({
 }
 
 ListComponent.propTypes = {
-    children: PropTypes.any
+    children: propTypes.any
 };
 
 ListComponent.defaultProps = {

@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import propTypes from 'prop-types';
 
 import { List } from '../List';
 import { ButtonIcon } from '../Button';
@@ -15,7 +15,7 @@ export const MenuContextComponent = ({
         <div className={className}>
             <ButtonIcon icon={iconTypes.cross} ariaLabel="Close"/>
             <form>
-                <List gap={vars.units.sm}>
+                <List gap={vars.space.sm}>
                     {children}
                 </List>
             </form>
@@ -24,7 +24,7 @@ export const MenuContextComponent = ({
 }
 
 MenuContextComponent.propTypes = {
-    children: PropTypes.any
+    children: propTypes.any
 };
 
 MenuContextComponent.defaultProps = {

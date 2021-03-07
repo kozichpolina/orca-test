@@ -1,4 +1,5 @@
 import { ReactSVG } from 'react-svg';
+import propTypes from 'prop-types';
 
 import Cross from '../../assets/icons/cross.svg';
 import DotsVertical from '../../assets/icons/dots-vertical.svg';
@@ -27,8 +28,7 @@ const iconSrc = {
 
 export const IconComponent = ({
    className,
-   type,
-   ...props
+   type
 }) => {
     return (
         <ReactSVG
@@ -38,3 +38,8 @@ export const IconComponent = ({
         />
     )
 };
+
+IconComponent.propTypes = {
+    type: propTypes.string.isRequired,
+    ...iconTypes.propTypes,
+}

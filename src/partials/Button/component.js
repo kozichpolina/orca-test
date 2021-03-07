@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import propTypes from 'prop-types';
 
 import { Icon } from '../Icon/index';
 
@@ -34,13 +34,19 @@ export const ButtonComponent = ({
 
     if (href) {
         output = (
-            <a href={href} className={className}>
+            <a href={href}
+               className={className}
+               aria-label={ariaLabel}
+               onClick={props.onClick}>
                 {getChildren(props)}
             </a>
         );
     } else {
         output = (
-            <button type="button" className={className} aria-label={ariaLabel}>
+            <button type="button"
+                className={className}
+                aria-label={ariaLabel}
+                onClick={props.onClick}>
                 {getChildren(props)}
             </button>
         );
@@ -49,9 +55,9 @@ export const ButtonComponent = ({
 }
 
 ButtonComponent.propTypes = {
-    children: PropTypes.any,
-    href: PropTypes.string,
-    primary: PropTypes.bool
+    children: propTypes.any,
+    href: propTypes.string,
+    primary: propTypes.bool
 };
 
 ButtonComponent.defaultProps = {

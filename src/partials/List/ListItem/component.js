@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import propTypes from 'prop-types';
 
 export const ListItemComponent = ({
     className,
@@ -13,7 +13,7 @@ export const ListItemComponent = ({
 }
 
 ListItemComponent.propTypes = {
-    children: PropTypes.any
+    children: propTypes.any
 };
 
 ListItemComponent.defaultProps = {

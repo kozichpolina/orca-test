@@ -2,7 +2,7 @@ import React from 'react';
 import propTypes from 'prop-types';
 import styled from 'styled-components';
 
-import * as vars from '../../../global-styles/variables'
+import * as styleVars from '../../../global-styles/variables'
 
 const headingFactory = ( factoryProps ) => {
     const { tag } = factoryProps;
@@ -13,7 +13,7 @@ const headingFactory = ( factoryProps ) => {
      }) => React.createElement(tag, {className}, children);
 
     return styled(HeadingComponent)`
-      font-size: ${vars.fontSize[tag]};
+      font-size: ${styleVars.fontSize[tag]};
       font-weight: normal;
   `;
 };

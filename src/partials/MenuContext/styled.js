@@ -1,13 +1,13 @@
 import styled from 'styled-components';
 
-import * as vars from '../../global-styles/variables.js';
+import * as styleVars from '../../global-styles/variables.js';
 import { MenuContextComponent } from './component';
 import { ButtonIcon } from '../Button';
 
 const MenuContext = styled(MenuContextComponent)`
   position: relative;
-  padding: ${vars.space.sl} ${vars.space.sm} ${vars.space.sm};
-  box-shadow: 0 0 10px 0 ${vars.colors.black}10;
+  padding: ${styleVars.space.sl} ${styleVars.space.sm} ${styleVars.space.sm};
+  box-shadow: 0 0 10px 0 ${styleVars.colors.black}10;
 
   ${ButtonIcon} {
     position: absolute;

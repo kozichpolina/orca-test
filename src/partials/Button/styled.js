@@ -1,14 +1,14 @@
 import styled from 'styled-components';
 
-import * as vars from '../../global-styles/variables.js';
+import * as styleVars from '../../global-styles/variables.js';
 import { ButtonComponent } from './component';
 import { Icon } from '../Icon/index';
 
 const ButtonBase = styled(ButtonComponent)`
   display: inline-flex;
   align-items: center;
-  font-size: ${vars.fontSize.bodyS};
-  transition-duration: ${vars.transition.duration};
+  font-size: ${styleVars.fontSize.bodyS};
+  transition-duration: ${styleVars.transition.duration};
   user-select: none;
 
   button& {
@@ -22,26 +22,26 @@ const ButtonBase = styled(ButtonComponent)`
 `;
 
 const Button = styled(ButtonBase)`
-  padding: ${vars.space.sm} ${vars.space.sl};
-  background-color: ${props => props.primary ? vars.colors.brand : vars.colors.white};
-  color: ${props => props.primary ? vars.colors.white : vars.colors.black};
+  padding: ${styleVars.space.sm} ${styleVars.space.sl};
+  background-color: ${props => props.primary ? styleVars.colors.brand : styleVars.colors.white};
+  color: ${props => props.primary ? styleVars.colors.white : styleVars.colors.black};
   text-transform: uppercase;
-  border: 1px solid ${props => props.primary ? "transparent" : `${vars.colors.grey}50`};
-  border-radius: ${vars.borderRadius.ss};
+  border: 1px solid ${props => props.primary ? "transparent" : `${styleVars.colors.grey}50`};
+  border-radius: ${styleVars.borderRadius.ss};
   transition-property: color, box-shadow;
   
   &:hover,
   &:focus {
-    color: ${props => props.primary ? vars.colors.white : vars.colors.brand};
-    box-shadow: 0 0 0 2px ${vars.colors.brand}20;
+    color: ${props => props.primary ? styleVars.colors.white : styleVars.colors.brand};
+    box-shadow: 0 0 0 2px ${styleVars.colors.brand}20;
     
     ${Icon} {
-      fill: ${props => props.primary ? vars.colors.white : vars.colors.brand};
+      fill: ${props => props.primary ? styleVars.colors.white : styleVars.colors.brand};
     }
   }
 
   ${Icon} { //:not:only-child is bad for performance
-    margin-right: ${vars.space.ss};
+    margin-right: ${styleVars.space.ss};
     
     &:only-child { 
       margin-right: 0;
@@ -51,20 +51,20 @@ const Button = styled(ButtonBase)`
 
 const ButtonText = styled(ButtonBase)`
   background-color: transparent;
-  color: ${vars.colors.black};
+  color: ${styleVars.colors.black};
   transition-property: color;
   
   &:hover,
   &:focus {
-    color: ${vars.colors.brand};
+    color: ${styleVars.colors.brand};
 
     ${Icon} {
-      fill: ${vars.colors.brand};
+      fill: ${styleVars.colors.brand};
     }
   }
 
   ${Icon} { //:not:only-child is bad for performance
-    margin-right: ${vars.space.ss};
+    margin-right: ${styleVars.space.ss};
 
     &:only-child {
       margin-right: 0;
@@ -78,7 +78,7 @@ const ButtonIcon = styled(ButtonBase)`
   &:hover,
   &:focus {
     ${Icon} {
-      fill: ${vars.colors.brand};
+      fill: ${styleVars.colors.brand};
     }
   }
 `;

@@ -1,6 +1,6 @@
 import { GlobalStyle } from './global-styles';
 
-import * as vars from './global-styles/variables';
+import * as styleVars from './global-styles/variables';
 
 import { Button } from './partials/Button/index';
 import { ButtonText } from './partials/Button/index';
@@ -9,6 +9,7 @@ import { Icon } from './partials/Icon';
 import { iconTypes } from './partials/Icon';
 import { MenuContext } from './partials/MenuContext';
 import { List } from './partials/List';
+import { Card } from './partials/Card';
 
 const styleTemporary = {
     display: "flex",
@@ -38,11 +39,12 @@ function App() {
           <ButtonText icon={iconTypes.pencil}>Edit</ButtonText>
           <ButtonText icon={iconTypes.trash}>Delete</ButtonText>
         </List>
-        <List direction='row-reverse' gap={vars.space.sl}>
+        <List direction='row-reverse' gap={styleVars.space.sl}>
           <ButtonText icon={iconTypes.files}>Duplicate</ButtonText>
           <ButtonText icon={iconTypes.pencil}>Edit</ButtonText>
           <ButtonText icon={iconTypes.trash}>Delete</ButtonText>
         </List>
+          <Card/>
       </div>
   );
 }

@@ -1,29 +1,29 @@
 import styled from 'styled-components';
 import propTypes from 'prop-types';
 
-import * as vars from '../../global-styles/variables.js';
+import * as styleVars from '../../global-styles/variables.js';
 import { IconComponent } from './component';
 
 const Icon = styled(IconComponent)`
   display: inline-flex;
-  fill: ${props => props.inverse? vars.colors.white : vars.colors.grey};
+  fill: ${props => props.inverse? styleVars.colors.white : styleVars.colors.grey};
   
   svg {
     width: ${props => props.size};
     height: ${props => props.size};
     transition-property: fill;
-    transition-duration: ${vars.transition.duration};
+    transition-duration: ${styleVars.transition.duration};
   }
 `;
 
 Icon.propTypes = {
     size: propTypes.string,
-    ...vars.iconSize.propTypes,
+    ...styleVars.iconSize.propTypes,
     inverse: propTypes.bool
 }
 
 Icon.defaultProps = {
-    size: vars.iconSize.sm,
+    size: styleVars.iconSize.sm,
     inverse: false
 }
 

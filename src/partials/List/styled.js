@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import propTypes from 'prop-types';
 
-import * as vars from '../../global-styles/variables.js';
+import * as styleVars from '../../global-styles/variables.js';
 import { ListComponent } from './component';
 import { ListItem } from './ListItem/';
 
@@ -19,12 +19,12 @@ List.propTypes = {
     direction: propTypes.string,
     ...['column', 'row', 'column-reverse', 'row-reverse'].propTypes,
     gap: propTypes.string,
-    ...vars.space.propTypes,
+    ...styleVars.space.propTypes,
 }
 
 List.defaultProps = {
     direction: 'column',
-    gap: vars.space.ss,
+    gap: styleVars.space.ss,
 }
 
 export { List };

@@ -4,7 +4,7 @@ import propTypes from 'prop-types';
 import { List } from '../List';
 import { ButtonIcon } from '../Button';
 
-import * as vars from '../../global-styles/variables.js';
+import * as styleVars from '../../global-styles/variables.js';
 import { iconTypes } from '../Icon';
 
 export const MenuContextComponent = ({
@@ -15,7 +15,7 @@ export const MenuContextComponent = ({
         <div className={className}>
             <ButtonIcon icon={iconTypes.cross} ariaLabel="Close"/>
             <form>
-                <List gap={vars.space.sm}>
+                <List gap={styleVars.space.sm}>
                     {children}
                 </List>
             </form>

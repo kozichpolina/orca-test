@@ -2,7 +2,7 @@ import { createGlobalStyle } from 'styled-components'
 
 import Mulish from '../assets/fonts/Mulish/mulish-regular.woff2'
 
-import * as vars from './variables.js';
+import * as styleVars from './variables.js';
 
 export const GlobalStyle = createGlobalStyle`
   @font-face {
@@ -24,22 +24,22 @@ export const GlobalStyle = createGlobalStyle`
     -webkit-font-smoothing: antialiased; 
     -moz-osx-font-smoothing: grayscale;
 
-    font-size: ${vars.fontSize.baseMobile};
+    font-size: ${styleVars.fontSize.baseMobile};
 
-    @media (min-width: ${vars.breakpoints.tablet}) {
-      font-size: ${vars.fontSize.base};
+    @media (min-width: ${styleVars.breakpoints.tablet}) {
+      font-size: ${styleVars.fontSize.base};
     }
   }
 
   body {
-    font-family: ${vars.fontFamily.base};
+    font-family: ${styleVars.fontFamily.base};
     margin: 0;
     font-weight: normal;
     line-height: 1.2;
-    color: ${vars.colors.brandBlack};
-    font-size: ${vars.fontSize.bodyM};
+    color: ${styleVars.colors.brandBlack};
+    font-size: ${styleVars.fontSize.bodyM};
     text-align: left;
-    background-color: ${vars.colors.white};
+    background-color: ${styleVars.colors.white};
   }
   
   h1,

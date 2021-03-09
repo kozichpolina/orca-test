@@ -35,7 +35,7 @@ export const GlobalStyle = createGlobalStyle`
     font-family: ${styleVars.fontFamily.base};
     margin: 0;
     font-weight: normal;
-    line-height: 1.2;
+    line-height: ${styleVars.lineHeight.base};
     color: ${styleVars.colors.brandBlack};
     font-size: ${styleVars.fontSize.bodyM};
     text-align: left;
@@ -53,7 +53,8 @@ export const GlobalStyle = createGlobalStyle`
   li,
   dl,
   dt,
-  dd {
+  dd,
+  p {
     padding: 0;
     margin: 0;
   }
@@ -66,7 +67,7 @@ export const GlobalStyle = createGlobalStyle`
     padding: 0;
     font-family: inherit;
     font-size: 100%;
-    line-height: 1.2;
+    line-height: 1;
     border: none;
     
     &:focus {

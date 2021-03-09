@@ -16,8 +16,16 @@ export const fontSize = {
     bodyS: ".625rem",
     bodyM: ".75rem",
     bodyL: ".875rem",
+    h1: "1.25rem",
     h2: "1.125rem",
-    h3: ".875rem"
+    h3: ".875rem",
+    h4: ".75rem",
+    h5: ".625rem",
+    h6: ".625rem"
+}
+export const lineHeight = {
+    base: "1.4",
+    heading: "1.2"
 }
 
 export const breakpoints = {

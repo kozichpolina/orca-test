@@ -1,14 +1,11 @@
 import { GlobalStyle } from './global-styles';
 
-import * as styleVars from './global-styles/variables';
-
 import { Button } from './partials/Button/index';
 import { ButtonText } from './partials/Button/index';
 import { ButtonIcon } from './partials/Button/index';
 import { Icon } from './partials/Icon';
 import { iconTypes } from './partials/Icon';
 import { MenuContext } from './partials/MenuContext';
-import { List } from './partials/List';
 import { Checkbox } from './partials/Inputs/Checkbox';
 
 const styleTemporary = {
@@ -34,16 +31,6 @@ function App() {
             <ButtonText icon={iconTypes.pencil}>Edit</ButtonText>
             <ButtonText icon={iconTypes.trash}>Delete</ButtonText>
         </MenuContext>
-        <List direction='row'>
-          <ButtonText icon={iconTypes.files}>Duplicate</ButtonText>
-          <ButtonText icon={iconTypes.pencil}>Edit</ButtonText>
-          <ButtonText icon={iconTypes.trash}>Delete</ButtonText>
-        </List>
-        <List direction='row-reverse' gap={styleVars.space.sl}>
-          <ButtonText icon={iconTypes.files}>Duplicate</ButtonText>
-          <ButtonText icon={iconTypes.pencil}>Edit</ButtonText>
-          <ButtonText icon={iconTypes.trash}>Delete</ButtonText>
-        </List>
         <Checkbox id="1" label="Label"/>
       </div>
   );

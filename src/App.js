@@ -1,6 +1,7 @@
 import { GlobalStyle } from './global-styles';
 
 import { Card } from './partials/Card';
+import { Modal } from './partials/Modal';
 
 const styleTemporary = {
     display: "flex",
@@ -15,6 +16,7 @@ function App() {
       <div style={styleTemporary}>
         <GlobalStyle/>
         <Card/>
+        <Modal/>
       </div>
   );
 }

@@ -13,9 +13,11 @@ const headingFactory = ( factoryProps ) => {
      }) => React.createElement(tag, {className}, children);
 
     return styled(HeadingComponent)`
+      line-height: ${styleVars.lineHeight.heading};
       font-size: ${styleVars.fontSize[tag]};
       font-weight: normal;
-  `;
+      margin-bottom: ${props => props.mb};
+    `;
 };
 
 const Heading = headingFactory({ tag: 'h1' });
@@ -29,11 +31,14 @@ for (let i = 2; i <= 6; i++) {
 }
 
 Heading.propTypes = {
-    children: propTypes.any.isRequired
+    children: propTypes.any.isRequired,
+    mb: propTypes.string,
+    ...styleVars.space.propTypes
 }
 
 Heading.defaultProps = {
-    children: null
+    children: null,
+    mb: '0'
 };
 
 /** @component */

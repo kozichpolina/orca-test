@@ -9,7 +9,7 @@ import { Icon } from './partials/Icon';
 import { iconTypes } from './partials/Icon';
 import { MenuContext } from './partials/MenuContext';
 import { List } from './partials/List';
-import { Card } from './partials/Card';
+import { Checkbox } from './partials/Inputs/Checkbox';
 
 const styleTemporary = {
     display: "flex",
@@ -44,7 +44,7 @@ function App() {
           <ButtonText icon={iconTypes.pencil}>Edit</ButtonText>
           <ButtonText icon={iconTypes.trash}>Delete</ButtonText>
         </List>
-          <Card/>
+        <Checkbox id="1" label="Label"/>
       </div>
   );
 }

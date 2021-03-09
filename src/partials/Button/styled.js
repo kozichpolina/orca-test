@@ -1,13 +1,15 @@
 import styled from 'styled-components';
+import propTypes from 'prop-types';
 
 import * as styleVars from '../../global-styles/variables.js';
+
 import { ButtonComponent } from './component';
 import { Icon } from '../Icon/index';
 
 const ButtonBase = styled(ButtonComponent)`
   display: inline-flex;
   align-items: center;
-  font-size: ${styleVars.fontSize.bodyS};
+  font-size: ${props => props.size};
   transition-duration: ${styleVars.transition.duration};
   user-select: none;
 
@@ -22,25 +24,27 @@ const ButtonBase = styled(ButtonComponent)`
 `;
 
 const Button = styled(ButtonBase)`
-  padding: ${styleVars.space.sm} ${styleVars.space.sl};
+  padding: ${styleVars.space.ss} ${styleVars.space.sl};
   background-color: ${props => props.primary ? styleVars.colors.brand : styleVars.colors.white};
   color: ${props => props.primary ? styleVars.colors.white : styleVars.colors.black};
   text-transform: uppercase;
+  justify-content: center;
   border: 1px solid ${props => props.primary ? "transparent" : `${styleVars.colors.grey}50`};
   border-radius: ${styleVars.borderRadius.ss};
+  min-width: 6.25rem;
   transition-property: color, box-shadow;
   
   &:hover,
   &:focus {
     color: ${props => props.primary ? styleVars.colors.white : styleVars.colors.brand};
-    box-shadow: 0 0 0 2px ${styleVars.colors.brand}20;
+    box-shadow: 0 0 0 .125rem ${props => props.primary ? `${styleVars.colors.brand}20` : `${styleVars.colors.grey}10`};
     
     ${Icon} {
       fill: ${props => props.primary ? styleVars.colors.white : styleVars.colors.brand};
     }
   }
 
-  ${Icon} { //:not:only-child is bad for performance
+  ${Icon} {
     margin-right: ${styleVars.space.ss};
     
     &:only-child { 
@@ -63,7 +67,7 @@ const ButtonText = styled(ButtonBase)`
     }
   }
 
-  ${Icon} { //:not:only-child is bad for performance
+  ${Icon} {
     margin-right: ${styleVars.space.ss};
 
     &:only-child {
@@ -82,5 +86,14 @@ const ButtonIcon = styled(ButtonBase)`
     }
   }
 `;
+
+Button.propTypes = {
+    size: propTypes.string,
+    ...styleVars.fontSize.propTypes
+};
+
+Button.defaultProps = {
+    size: styleVars.fontSize.bodyS
+};
 
 export {Button, ButtonText, ButtonIcon};

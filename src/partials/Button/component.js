@@ -1,7 +1,7 @@
 import React from 'react';
 import propTypes from 'prop-types';
 
-import { Icon } from '../Icon/index';
+import { Icon, iconTypes } from '../Icon/index';
 
 const getChildren = (props) => {
     const {
@@ -30,7 +30,7 @@ export const ButtonComponent = ({
     ariaLabel,
     ...props
 }) => {
-    let output = null;
+    let output;
 
     if (href) {
         output = (
@@ -57,11 +57,14 @@ export const ButtonComponent = ({
 ButtonComponent.propTypes = {
     children: propTypes.any,
     href: propTypes.string,
-    primary: propTypes.bool
+    primary: propTypes.bool,
+    icon: propTypes.string,
+        ...iconTypes.propTypes
 };
 
 ButtonComponent.defaultProps = {
     children: null,
     href: null,
-    primary: null
+    primary: null,
+    icon: null
 };

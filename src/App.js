@@ -1,3 +1,4 @@
+import React, {useState} from 'react';
 import { GlobalStyle } from './global-styles';
 
 import { Card } from './partials/Card';
@@ -12,11 +13,16 @@ const styleTemporary = {
 }
 
 function App() {
-  return (
+    const [isModalOpen, setModalIsOpen] = useState(false);
+
+    return (
       <div style={styleTemporary}>
         <GlobalStyle/>
-        <Card/>
-        <Modal/>
+        <Card onModalOpen={()=>{setModalIsOpen(true)}}/>
+          {
+            isModalOpen &&
+            <Modal onModalClose={()=>{setModalIsOpen(false)}}/>
+          }
       </div>
   );
 }

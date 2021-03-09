@@ -9,7 +9,8 @@ import { Text } from '../typo/Text';
 import { ListItem } from '../List/ListItem';
 
 export const CardComponent = ({
-    className
+    className,
+    onModalOpen
 }) => {
 
   const [isOpen, setIsOpen] = useState(false);
@@ -66,7 +67,7 @@ export const CardComponent = ({
               </CardComponent.Meta>
           </CardComponent.Body>
           <CardComponent.Footer>
-              <Button primary>Open modal</Button>
+              <Button primary onClick={onModalOpen}>Open modal</Button>
           </CardComponent.Footer>
       </div>
   );

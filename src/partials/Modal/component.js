@@ -12,7 +12,8 @@ import { Heading } from '../typo/Heading';
 import { Checkbox } from '../Inputs/Checkbox';
 
 export const ModalComponent = ({
-        className
+        className,
+        onModalClose
     }) => {
 
     return (
@@ -24,6 +25,7 @@ export const ModalComponent = ({
                         icon={iconTypes.cross}
                         size={styleVars.fontSize.base}
                         ariaLabel="Close"
+                        onClick={onModalClose}
                     />
                 </ModalComponent.Header>
                 <ModalComponent.Form>

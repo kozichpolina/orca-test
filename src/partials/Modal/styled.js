@@ -10,7 +10,7 @@ ModalComponent.Overlay = styled.div`
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 10;//change
+  z-index: 10;
   width: 100vw;
   height: 100vh;
   background: ${styleVars.colors.brandBlack}30;
@@ -34,7 +34,7 @@ ModalComponent.Header = styled.div`
 `
 
 ModalComponent.FormBody = styled.div`
-  padding:  ${styleVars.space.sl} 0;
+  padding:  ${styleVars.space.sl} 0 calc(1.5 * ${styleVars.space.sl});
 `
 
 ModalComponent.Form = styled.form`

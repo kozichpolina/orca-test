@@ -88,11 +88,22 @@ const ButtonIcon = styled(ButtonBase)`
 `;
 
 Button.propTypes = {
-    size: propTypes.string,
-    ...styleVars.fontSize.propTypes
+    size: propTypes.string
+};
+ButtonText.propTypes = {
+    size: propTypes.string
+};
+ButtonIcon.propTypes = {
+    size: propTypes.string
 };
 
 Button.defaultProps = {
+    size: styleVars.fontSize.bodyS
+};
+ButtonText.defaultProps = {
+    size: styleVars.fontSize.bodyS
+};
+ButtonIcon.defaultProps = {
     size: styleVars.fontSize.bodyS
 };
 
